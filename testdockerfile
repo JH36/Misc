@@ -1,0 +1,30 @@
+#If Docker is not installed - install using following  code
+sudo apt-get update
+sudo apt-get install ./docker-desktop-<version>-<arch>.deb
+
+#To launch Docker
+systemctl --user start docker-desktop
+
+#To Check Docker Version
+#docker --version
+
+#To End Docker Desktop 
+systemctl --user stop docker-desktop
+
+#Docker params
+docker.enabled = true
+
+#singularity params
+singularity.enabled = true
+
+
+#Docker Images
+
+fastqc_container: 'staphb/fastqc:0.11.9'
+multiqc_container: 'staphb/multiqc:'
+samtools_container:  'samtools/samtools:1.17'
+quast_container: 'staphb/quast:'
+bwa_container: 'staphb/bwa:'
+bedtools_container: 'staphb/bedtools:'
+mash_container: 'staphb/mash:'
+
